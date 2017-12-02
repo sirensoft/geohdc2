@@ -38,7 +38,7 @@ app.use(session({
 app.use(function(req, res, next) {
     res.locals.session = req.session;
     next();
-})
+});
 
 app.use(function(req, res, next) {
     if (req.cookies.username && !req.session.username) {
@@ -50,12 +50,13 @@ app.use(function(req, res, next) {
 
 
 // controller
-app.use('/index', require('./controllers/indexController'))
-app.use('/authen', require('./controllers/authenController'))
 app.get('/', function(req, res) {
-        res.redirect('/index');
-    })
-    //end controller
+    res.redirect('/index');
+});
+app.use('/index', require('./controllers/indexController'));
+app.use('/authen', require('./controllers/authenController'));
+app.use('/api', require('./controllers/apiController'));
+//end controller
 
 
 // catch 404 and forward to error handler
