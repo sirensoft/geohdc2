@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var authenCheck = require('../components/authenCheck');
+var authenCheck = require('../modules/authenCheck');
 
 
 router.use(authenCheck);

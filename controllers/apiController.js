@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var tokenCheck = require('../components/tokenCheck');
+var tokenCheck = require('../modules/tokenCheck');
 
 router.use(tokenCheck);
 
