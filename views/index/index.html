@@ -1,4 +1,11 @@
 <%- include('../layouts/_header.html') -%>
-    Index token =
-    <%=session.token%>
-        <%- include('../layouts/_footer.html') -%>
+    <form method="post" action="/authen/logout">
+        <button class="btn btn-danger">ออกระบบ</button>
+    </form>
+    <div class="panel panel-default">
+        <div class="panel-heading">Title</div>
+        <div class="panel-body">
+            <%=session.token%>
+        </div>
+    </div>
+    <%- include('../layouts/_footer.html') -%>

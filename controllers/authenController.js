@@ -7,7 +7,7 @@ var mUser = new User();
 
 var crypto = require('crypto')
 
-router.get('/logout', (req, res) => {
+router.post('/logout', (req, res) => {
     req.session.destroy();
     res.clearCookie('username');
     res.redirect('/')
