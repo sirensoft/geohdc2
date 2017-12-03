@@ -1,11 +1,16 @@
 <%- include('../layouts/_header.html') -%>
-    <form method="post" action="/authen/logout">
-        <button class="btn btn-danger">ออกระบบ</button>
-    </form>
-    <div class="panel panel-default">
-        <div class="panel-heading">Title</div>
-        <div class="panel-body">
-            <%=session.token%>
+    <div class="contrainer-fluid">
+        <form method="post" action="/authen/logout">
+            <button class="btn btn-danger">ออกระบบ</button>
+        </form>
+        <div class="panel panel-default">
+            <div class="panel-heading">Title</div>
+            <div class="panel-body">
+                <%=session.token%>
+            </div>
         </div>
+
+        <input class="datepicker" data-date-format="mm/dd/yyyy">
+
     </div>
     <%- include('../layouts/_footer.html') -%>
